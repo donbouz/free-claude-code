@@ -82,7 +82,7 @@ asyncio_mode = "auto"
 addopts = [
     "--cov=src/free_claude_code",
     "--cov-report=term-missing",
-    "--cov-report=xml",
+    # xml report not needed for local dev, skipping to keep output clean
     "-v",
 ]
 
