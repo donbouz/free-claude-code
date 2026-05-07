@@ -39,8 +39,9 @@ class ModelConfig:
     )
 
     # Temperature for generation (0.0 = deterministic, 1.0 = creative)
+    # Lowered default from 0.7 to 0.3 — I prefer more deterministic output for coding tasks
     temperature: float = field(
-        default_factory=lambda: float(os.getenv("TEMPERATURE", "0.7"))
+        default_factory=lambda: float(os.getenv("TEMPERATURE", "0.3"))
     )
 
 
@@ -94,14 +95,4 @@ _config: Optional[AppConfig] = None
 
 
 def get_config() -> AppConfig:
-    """Return the global AppConfig instance, creating it on first call."""
-    global _config
-    if _config is None:
-        _config = AppConfig()
-    return _config
-
-
-def reset_config() -> None:
-    """Reset the global config (mainly useful in tests)."""
-    global _config
-    _config = None
+    """Return the glo
