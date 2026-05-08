@@ -2,6 +2,10 @@
 
 This package provides a CLI tool that interfaces with various free/open
 AI providers to replicate Claude Code-like functionality.
+
+Personal fork notes:
+- Using this for learning how AI coding assistants work under the hood
+- See README for setup instructions with different providers
 """
 
 __version__ = "0.1.0"
