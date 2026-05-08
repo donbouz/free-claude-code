@@ -84,6 +84,8 @@ addopts = [
     "--cov-report=term-missing",
     # xml report not needed for local dev, skipping to keep output clean
     "-v",
+    # stop after first failure — faster feedback loop when iterating locally
+    "-x",
 ]
 
 [tool.coverage.run]
